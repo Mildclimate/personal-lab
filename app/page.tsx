@@ -1,69 +1,133 @@
-import Image from "next/image";
-
 export default function Home() {
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert h-5 w-[100px]"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the{" "}
-            <code className="rounded bg-black/[.06] px-1.5 py-0.5 font-mono text-[0.9em] dark:bg-white/[.08]">
-              page.tsx
-            </code>{" "}
-            file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
+    <main className="bg-stone-50">
+      {/* Hero */}
+      <section className="mx-auto max-w-7xl px-6 pb-24 pt-32">
+        <div className="max-w-4xl">
+          <p className="mb-6 text-sm font-medium uppercase tracking-[0.25em] text-stone-500">
+            Personal Laboratory
           </p>
+
+          <h1 className="text-5xl font-semibold leading-tight tracking-tight text-stone-900 md:text-7xl">
+            Building at the intersection of
+            <span className="block text-stone-500">
+              AI, Animation & Technology.
+            </span>
+          </h1>
+
+          <p className="mt-8 max-w-2xl text-lg leading-8 text-stone-600">
+            A personal space for projects, research, experiments,
+            development logs, and self-hosted infrastructure.
+          </p>
+
+          <div className="mt-10 flex flex-col gap-3 sm:flex-row">
+            <a
+              href="/projects"
+              className="w-full rounded-full border border-slate-900 bg-white px-6 py-3 text-center text-sm font-medium hover:bg-stone-100 shadow-[0_0_0_1px_rgba(15,23,42,0.05)] transition duration-200 sm:w-auto"
+            >
+              Explore Projects
+            </a>
+
+            <a
+              href="/research"
+              className="w-full rounded-full border border-stone-300 bg-white px-6 py-3 text-center text-sm font-medium text-stone-800 transition hover:border-stone-400 hover:bg-stone-100 sm:w-auto"
+            >
+              Research
+            </a>
+          </div>
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
+      </section>
+
+      {/* Main Sections */}
+      <section className="border-t border-stone-200 bg-white/80">
+        <div className="mx-auto grid max-w-7xl grid-cols-1 divide-y divide-stone-200 md:grid-cols-3 md:divide-x md:divide-y-0">
           <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
+            href="/projects"
+            className="group p-8 transition hover:bg-stone-100 md:p-10"
           >
-            <Image
-              className="dark:invert h-[14px] w-4"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={14}
-            />
-            Deploy Now
+            <p className="mb-12 text-sm text-stone-500">01</p>
+
+            <h2 className="text-2xl font-medium text-stone-900">Projects</h2>
+
+            <p className="mt-4 leading-7 text-stone-600">
+              Games, animation, AI, web applications, and other
+              technical projects.
+            </p>
+
+            <span className="mt-8 inline-block text-sm text-stone-500 transition group-hover:text-stone-900">
+              View Projects →
+            </span>
           </a>
+
           <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
+            href="/research"
+            className="group p-8 transition hover:bg-stone-100 md:p-10"
           >
-            Documentation
+            <p className="mb-12 text-sm text-stone-500">02</p>
+
+            <h2 className="text-2xl font-medium text-stone-900">Research</h2>
+
+            <p className="mt-4 leading-7 text-stone-600">
+              Research notes, experiments, technical investigations,
+              and ongoing work.
+            </p>
+
+            <span className="mt-8 inline-block text-sm text-stone-500 transition group-hover:text-stone-900">
+              View Research →
+            </span>
+          </a>
+
+          <a
+            href="/lab"
+            className="group p-8 transition hover:bg-stone-100 md:p-10"
+          >
+            <p className="mb-12 text-sm text-stone-500">03</p>
+
+            <h2 className="text-2xl font-medium text-stone-900">Home Lab</h2>
+
+            <p className="mt-4 leading-7 text-stone-600">
+              Self-hosted infrastructure, servers, services,
+              networking, and experiments.
+            </p>
+
+            <span className="mt-8 inline-block text-sm text-stone-500 transition group-hover:text-stone-900">
+              Explore Lab →
+            </span>
           </a>
         </div>
-      </main>
-    </div>
+      </section>
+
+      {/* About */}
+      <section className="mx-auto max-w-7xl px-6 py-24">
+        <div className="grid gap-12 md:grid-cols-2">
+          <div>
+            <p className="text-sm uppercase tracking-[0.2em] text-stone-500">
+              About
+            </p>
+
+            <h2 className="mt-4 text-4xl font-semibold tracking-tight text-stone-900">
+              A place to build,
+              <br />
+              experiment and document.
+            </h2>
+          </div>
+
+          <div className="max-w-xl text-stone-600">
+            <p className="leading-8">
+              This website is both a portfolio and an ongoing technical
+              project. It documents what I build, what I research,
+              what I learn, and how the underlying infrastructure works.
+            </p>
+
+            <a
+              href="/about"
+              className="mt-8 inline-block text-sm text-stone-900 underline underline-offset-4"
+            >
+              More about me →
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
   );
 }
