@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
-import Link from "next/link";
 import "./globals.css";
+import SiteHeader from "./site-header";
 
 export const metadata: Metadata = {
   title: "Henry's Personal Lab",
@@ -15,14 +15,6 @@ export const viewport = {
   themeColor: "#f5f5f4",
 };
 
-const navigation = [
-  { name: "Home", href: "/" },
-  { name: "Projects", href: "/projects" },
-  { name: "Research", href: "/research" },
-  { name: "Lab", href: "/lab" },
-  { name: "About", href: "/about" },
-];
-
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -33,36 +25,7 @@ export default function RootLayout({
       <body className="min-h-screen overflow-x-hidden bg-stone-50 text-stone-900 antialiased">
         <div className="flex min-h-screen flex-col">
           {/* Header */}
-          <header className="border-b border-stone-200/90 bg-white/80 backdrop-blur-sm">
-            <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-6">
-              {/* Brand */}
-              <Link
-                href="/"
-                className="group flex items-center gap-3"
-              >
-                <span className="text-sm font-semibold tracking-tight text-stone-900">
-                  Henry&apos;s Personal Lab
-                </span>
-
-                <span className="hidden text-[10px] font-medium uppercase tracking-[0.2em] text-stone-500 transition group-hover:text-stone-700 sm:inline">
-                  LAB / 01
-                </span>
-              </Link>
-
-              {/* Navigation */}
-              <nav className="flex items-center gap-6 text-sm">
-                {navigation.map((item) => (
-                  <Link
-                    key={item.href}
-                    href={item.href}
-                    className="text-stone-600 transition-colors hover:text-stone-900"
-                  >
-                    {item.name}
-                  </Link>
-                ))}
-              </nav>
-            </div>
-          </header>
+          <SiteHeader />
 
           {/* Main Content */}
           <main className="flex-1">{children}</main>

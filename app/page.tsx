@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export default function Home() {
   return (
     <main className="bg-stone-50">
@@ -21,19 +23,19 @@ export default function Home() {
           </p>
 
           <div className="mt-10 flex flex-col gap-3 sm:flex-row">
-            <a
+            <Link
               href="/projects"
               className="w-full rounded-full border border-slate-900 bg-white px-6 py-3 text-center text-sm font-medium hover:bg-stone-100 shadow-[0_0_0_1px_rgba(15,23,42,0.05)] transition duration-200 sm:w-auto"
             >
               Explore Projects
-            </a>
+            </Link>
 
-            <a
+            <Link
               href="/research"
               className="w-full rounded-full border border-stone-300 bg-white px-6 py-3 text-center text-sm font-medium text-stone-800 transition hover:border-stone-400 hover:bg-stone-100 sm:w-auto"
             >
               Research
-            </a>
+            </Link>
           </div>
         </div>
       </section>
@@ -41,7 +43,7 @@ export default function Home() {
       {/* Main Sections */}
       <section className="border-t border-stone-200 bg-white/80">
         <div className="mx-auto grid max-w-7xl grid-cols-1 divide-y divide-stone-200 md:grid-cols-3 md:divide-x md:divide-y-0">
-          <a
+          <Link
             href="/projects"
             className="group p-8 transition hover:bg-stone-100 md:p-10"
           >
@@ -57,9 +59,9 @@ export default function Home() {
             <span className="mt-8 inline-block text-sm text-stone-500 transition group-hover:text-stone-900">
               View Projects →
             </span>
-          </a>
+          </Link>
 
-          <a
+          <Link
             href="/research"
             className="group p-8 transition hover:bg-stone-100 md:p-10"
           >
@@ -75,9 +77,9 @@ export default function Home() {
             <span className="mt-8 inline-block text-sm text-stone-500 transition group-hover:text-stone-900">
               View Research →
             </span>
-          </a>
+          </Link>
 
-          <a
+          <Link
             href="/lab"
             className="group p-8 transition hover:bg-stone-100 md:p-10"
           >
@@ -93,7 +95,7 @@ export default function Home() {
             <span className="mt-8 inline-block text-sm text-stone-500 transition group-hover:text-stone-900">
               Explore Lab →
             </span>
-          </a>
+          </Link>
         </div>
       </section>
 
@@ -119,12 +121,12 @@ export default function Home() {
               what I learn, and how the underlying infrastructure works.
             </p>
 
-            <a
+            <Link
               href="/about"
               className="mt-8 inline-block text-sm text-stone-900 underline underline-offset-4"
             >
               More about me →
-            </a>
+            </Link>
           </div>
         </div>
       </section>
